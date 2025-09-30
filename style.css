@@ -82,6 +82,9 @@ body {
     margin: 0 1rem;
     font-size: 1.1rem;
     color: #000;
+    background-color: #ff66007c;
+    border-radius: 50px;
+    padding: 0px 10px;
 }
 
 /* --- Buttons --- */
@@ -243,6 +246,104 @@ footer {
     font-size: 0.9rem;
     color: rgba(255,255,255,0.8);
 }
+
+
+
+/* --- Variable Definitions --- */
+        :root {
+            --primary-color: #ff6600; /* Vibrant Orange */
+            --dark-color: #121212;
+            --light-color: #ffffff;
+            --transparent-dark: rgba(18, 18, 18, 0.85); /* For overlays */
+        }
+
+        /* --- General Styles --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            margin: 0;
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            font-weight: 900;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* --- Table Styles --- */
+        .points-table {
+            width: 100%;
+            max-width: 500px; /* Adjusted for four columns */
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2);
+        }
+
+        .points-table th, .points-table td {
+            padding: 0.5rem; /* Compact padding */
+            text-align: center;
+            font-size: 0.85rem; /* Smaller font for compactness */
+            border-bottom: 1px solid #444;
+        }
+
+        .points-table th {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            font-weight: 700;
+        }
+
+        .points-table tr:nth-child(even) {
+            background-color: #2b2b2b;
+        }
+
+        .points-table tr:hover {
+            background-color: rgba(255, 102, 0, 0.2);
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 576px) {
+            .points-table th, .points-table td {
+                padding: 0.4rem;
+                font-size: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .points-table {
+                max-width: 350px; /* Smaller for mobile */
+            }
+        }
+
+        /* --- Animations --- */
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
 /* Responsive */
 @media(max-width:992px) {
